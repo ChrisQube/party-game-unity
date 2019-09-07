@@ -79,7 +79,7 @@ public class TriggerLocations : MonoBehaviour
             else
                 collisionName2 = collision.name;
         }
-        else if (collision.tag == "Player Aura")
+        if (collision.tag == "Player Aura")
         {
             if (!newLocation)
             {
