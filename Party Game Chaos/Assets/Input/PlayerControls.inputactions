@@ -1,0 +1,52 @@
+{
+    "name": "PlayerControls",
+    "maps": [
+        {
+            "name": "Player1",
+            "id": "9d11a9c9-9947-40f9-91a6-bc4a36e8b314",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "f365d74f-156e-46f3-b59c-e9b75d53e66b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Action",
+                    "type": "Button",
+                    "id": "4183f63d-6b79-496c-bad1-b9c9e6fe490e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "301f628e-4ff1-4d33-82a8-3fd81ecb11b2",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d10180b1-7972-4bf6-b142-f58985375b7c",
+                    "path": "<HID::GameStop PS4 Fun Controller>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
