@@ -14,8 +14,8 @@ public class TriggerLocations : MonoBehaviour
     bool locationFullyBuffered = false;
     bool locationBufferOn = false;
 
-    string locationName1 = "";
-    string locationName2 = "";
+    string collisionName1 = "";
+    string collisionName2 = "";
 
     float xScale = 0;
     public float loadSpeed = 0.5f;
@@ -45,11 +45,10 @@ public class TriggerLocations : MonoBehaviour
                 locationBufferOn = false;
 
                 locationBufferReset();
-
-
+                
                 if (newLocation)
                 {
-                    hoverTextComponent.text = locationName1;
+                    hoverTextComponent.text = collisionName1;
                     newLocation = false;
                 }
                 else
@@ -62,8 +61,8 @@ public class TriggerLocations : MonoBehaviour
 
 
                 //Remember to reset locationName1 & 2 after quest completion/failure
-                locationName1 = "";
-                locationName2 = "";
+                collisionName1 = "";
+                collisionName2 = "";
 
             }
         }
@@ -76,10 +75,24 @@ public class TriggerLocations : MonoBehaviour
             locationBufferOn = true;
 
             if (newLocation)
-                locationName1 = collision.name;
+                collisionName1 = collision.name;
             else
-                locationName2 = collision.name;
+                collisionName2 = collision.name;
         }
+        else if (collision.tag == "Player Aura")
+        {
+            if (!newLocation)
+            {
+                collisionName2 = collision.name;
+
+                locationBufferOn = true;
+
+                Debug.Log("collided with player");
+            }
+
+        }
+
+        //Check quest correct here.
 
         /* REMOVED
         //checks new location then updates HoverText above the specific player
